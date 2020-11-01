@@ -36,7 +36,7 @@ class InstagramClient
 
 		$instagramFeed = @file_get_contents($this->instagramFeedUrl);
 
-		if ($refreshAccessTokenFeed === false) {
+		if ($instagramFeed === false) {
 			throw new RequestException('Something went wrong with instagram feed. ' . $this->instagramFeedUrl);
 		}
 	}
